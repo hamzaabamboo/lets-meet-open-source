@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/qr_code"
+          android:title="Generate QR Code"
+          android:icon="@drawable/qrcode_scan"
+          app:showAsAction="always"/>
+    <item android:id="@+id/action_location"
+          android:title="Open Map"
+          app:showAsAction="always" android:icon="@drawable/ic_location_on_black_24dp"/>
+    <item android:id="@+id/action_information"
+          android:title="Information"
+          android:icon="@drawable/ic_info_black_24dp"
+          app:showAsAction="always"/>
+    <item android:id="@+id/action_leave"
+          android:title="Leave Party"
+          android:icon="@drawable/ic_exit_to_app_black_24dp"
+          app:showAsAction="always"/>
+    <item android:id="@+id/action_share"
+          android:title="Share"
+          android:icon="?attr/actionModeShareDrawable"
+          app:showAsAction="ifRoom"/>
+    <item android:title="Edit Party" android:id="@+id/action_edit"/>
+    <item android:id="@+id/toggle_drawer"
+          android:title="Toggle Sidebar"
+          android:icon="@drawable/ic_menu"
+          app:showAsAction="ifRoom"/>
+
+</menu>

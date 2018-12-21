@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Let\'s Meet</string>
+    <string name="facebook_application_id" translatable="false"><!--Facebook app id --></string>
+    <!-- Facebook Application ID, prefixed by 'fb'. Enables Chrome Custom tabs. -->
+    <string name="facebook_login_protocol_scheme" translatable="false"><!-- Facebook key --></string>
+    <string name="title_activity_maps">Map</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+    <string name="topic">Topic</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="location">Location</string>
+    <string name="make_public">Make Public</string>
+    <string name="create_button">Create Party</string>
+    <string name="edit_button">Done</string>
+    <string name="qr_prompt">Use any QR code scanner to join this party</string>
+    <string name="qr_shortcut_short_label">QR Scan</string>
+    <string name="qr_shortcut_long_label">Scan QR Code to join party</string>
+    <string name="qr_shortcut_disabled">You\'re not logged in</string>
+    <string name="slogan">A very cool app where you can meet friends</string>
+    <string name="no_party_message">You don\'t have any party,\n go to \"+\" to add one</string>
+    <string name="no_public_party_message">There aren\'t any public party available to join</string>
+    <string name="channel_name">Let\'s meet notification channel</string>
+    <string name="channel_description">Fort let\'s meet app</string>
+    <string name="open_in_maps">Open Direction In Google Maps</string>
+    <string name="choose_date">Choose Date</string>
+    <string name="choose_time">Choose Time</string>
+    <string name="choose_location">Choose Location</string>
+</resources>

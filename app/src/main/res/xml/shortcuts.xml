@@ -1,0 +1,19 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+            android:shortcutId="qr"
+            android:enabled="true"
+            android:icon="@drawable/qrcode_scan"
+            android:shortcutShortLabel="@string/qr_shortcut_short_label"
+            android:shortcutLongLabel="@string/qr_shortcut_long_label"
+            android:shortcutDisabledMessage="@string/qr_shortcut_disabled">
+        <intent
+                android:action="org.thinc.comprog.letsmeet.OPEN_QR_CODE"
+                android:targetPackage="org.thinc.comprog.letsmeet"
+                android:targetClass="org.thinc.comprog.letsmeet.feature.addparty.AddPartyActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+</shortcuts>

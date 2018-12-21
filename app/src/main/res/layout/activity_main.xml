@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="viewModel"
+                type="org.thinc.comprog.letsmeet.feature.main.MainActivityViewModel"/>
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+                                                         android:layout_height="wrap_content"
+                                                         app:layout_constraintBottom_toBottomOf="parent"
+                                                         app:layout_constraintEnd_toEndOf="parent"
+                                                         app:layout_constraintStart_toStartOf="parent"
+                                                         android:id="@+id/coordinatorLayout">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".feature.main.MainActivity">
+            <TextView
+                    android:text="@string/no_party_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/no_party_message"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/swipe_refresh_layout"
+                    android:textAlignment="center" android:textSize="18sp" android:visibility="gone"/>
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:layout_width="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent" android:id="@+id/swipe_refresh_layout"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.0">
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/party_list"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/logout" android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:padding="8dp"/>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                app:srcCompat="@drawable/ic_add"
+                android:id="@+id/fab" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:backgroundTint="@color/colorAccent"
+                android:onClick="@{(view)->viewModel.toAdd(view)}"
+                app:layout_anchor="@id/bar"
+                app:elevation="8dp" app:fabSize="normal" android:tint="@color/black"
+        />
+        <com.google.android.material.bottomappbar.BottomAppBar
+                android:layout_width="match_parent"
+                android:layout_gravity="bottom"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:backgroundTint="@color/colorPrimary"
+                app:fabAlignmentMode="end"
+                android:id="@+id/bar"
+                app:hideOnScroll="true"
+                android:gravity="bottom" android:layout_height="wrap_content" app:fabCradleMargin="0dp"
+                app:fabCradleRoundedCornerRadius="0dp" app:fabCradleVerticalOffset="0dp"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
